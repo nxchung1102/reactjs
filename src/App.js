@@ -3,6 +3,8 @@ import React from "react";
 import AlbumFeature from "./features/Album";
 import TodoFeature from "./features/Todo";
 import Lab1 from "./Lab1";
+import Counter from "./Lab2/Counter";
+import TodoList from "./Lab2/TodoList";
 
 //rsfp
 
@@ -79,7 +81,9 @@ function App() {
       {/* <AlbumFeature /> */}
 
       {/* <TodoFeature /> */}
-      <Lab1 />
+      {/* <Lab1 /> */}
+      {/* <Counter /> */}
+      <TodoList />
     </div>
   );
 }
