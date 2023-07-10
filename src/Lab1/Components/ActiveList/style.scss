@@ -2,6 +2,10 @@
   padding-left: 10px;
 }
 .list-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   img {
     margin-left: 10px;
     width: 50px;

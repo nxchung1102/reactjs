@@ -26,23 +26,29 @@ function ActiveList({ activeList, onchkClick, onChkChange }) {
       {activeList.map((active, i) => {
         return (
           <div className="list-checkbox">
-            <input
-              type="checkbox"
-              id={active.id}
-              name={active.name}
-              className={classNames({
-                "active-item": true,
-                selected: active.status === "selected",
-              })}
-              onClick={() => {
-                handleClick(active, i);
-              }}
-              onChange={(e) => {
-                handleChange(e);
-              }}
-            />
-            <label for={active.name}>{active.name}</label>
-            <img src={active.URL} alt={active.name} />
+            <div>
+              <input
+                type="checkbox"
+                id={active.id}
+                name={active.name}
+                className={classNames({
+                  "active-item": true,
+                  selected: active.status === "selected",
+                })}
+                onClick={() => {
+                  handleClick(active, i);
+                }}
+                onChange={(e) => {
+                  console.log(e);
+                  handleChange(e);
+                }}
+              />
+              <label for={active.name}>{active.name}</label>
+            </div>
+
+            <div className="test-image">
+              <img src={active.URL} alt={active.name} />
+            </div>
           </div>
         );
       })}
